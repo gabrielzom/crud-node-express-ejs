@@ -1,0 +1,37 @@
+<%- include('header'); %>
+
+<div class="container">
+    <hr>
+    <form action="/cadastro" method="post">
+    <h2>Cadastro de clientes</h1>
+    <div class="form-floating col-5 mb-2">
+        <input name="cliente" type="text" class="form-control" id="floatingInput" placeholder="example">
+        <label for="floatingInput">Cliente</label>
+      </div>
+      <div class="form-floating col-5 mb-2">
+        <input name="cnpj" type="text" class="form-control" id="floatingInput" placeholder="example">
+        <label for="floatingPassword">CNPJ</label>
+      </div>
+      <div class="form-floating col-5 mb-2">
+        <input name="telefone" type="text" class="form-control" id="floatingInput" placeholder="example">
+        <label for="floatingPassword">Telefone</label>
+      </div>
+      <div class="form-floating  col-5 mb-2">
+        <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingPassword">E-mail</label>
+      </div>
+      <div class="form-floating col-5 mb-2">
+        <input name="contato" type="text" class="form-control" id="floatingInput" placeholder="example">
+        <label for="floatingInput">Nome contato</label>
+      </div>
+      <div class="form-floating col-5 mb-2">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </div>
+    </form>
+</div>
+
+<script>
+  document.querySelector('#home').setAttribute('class','nav-link')
+  document.querySelector('#cad-cliente').setAttribute('class','nav-link active')
+</script>
+<%- include('footer'); %>

@@ -1,0 +1,35 @@
+<div class="container">
+  <br><br>
+  <h2><%= title %></h2>
+  <hr>
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">CNPJ</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Contato</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <% for(var i=0; i<Object.keys(cliente).length; i++) { %>
+      <tr>
+        <th value=<%= i+1%> scope="row"><%= cliente[i].id %></th>
+        <td><%= cliente[i].cliente %></td>
+        <td><%= cliente[i].cnpj %></td>
+        <td><%= cliente[i].telefone %></td>
+        <td><%= cliente[i].email %></td>
+        <td><%= cliente[i].contato %></td>
+          <td><a href="/update/<%=cliente[i].id %>"><button class="btn btn-primary">Editar</button></a></td>
+          <td><form action="/<%= cliente[i].id %>?_method=DELETE" method="POST"><button type="submit" class="btn btn-danger">Excluir</button></form></td>
+      </tr>
+    <% } %>
+    </tbody>
+  </table>
+  <h3><a href="/">Voltar</a></h3>
+</div>
